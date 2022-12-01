@@ -17,7 +17,7 @@ app.get('/gettime', (req, res) => {
 })
 const  __dirname = path.resolve()
 app.use('/', express.static(path.join(__dirname , './server/build')))
-app.get('*', express.static(path.join(__dirname , './server/build')))
+app.use('*', express.static(path.join(__dirname , './server/build')))
 
 
 app.listen(port, () => {
