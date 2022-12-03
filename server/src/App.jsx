@@ -2,8 +2,13 @@
 import { useState, useEffect } from "react"
 import axios from "axios";
 
-
-
+let baseUrl = ``
+if(window.location.href.split(':')[0] === 'http'){
+    baseUrl = `http://localhost:5001`
+}
+else{
+    baseUrl = ''
+}
 
 function Weather() {
 
@@ -14,7 +19,7 @@ function Weather() {
         e.preventDefault();
 
         console.log("I am click handler")
-        axios.get(`http://localhost:5001/weather`)
+        axios.get(`${baseUrl}/weather/${cityName}`)
             .then(response => {
                 console.log("response: ", response.data);
 

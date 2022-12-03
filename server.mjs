@@ -13,6 +13,7 @@ app.get('/abc', (req, res) => {
 })
 app.get('/weather', (req, res) => {
     console.log("request ip: ", req.ip);
+    
     res.send({
         temp: 30,
         min: 26,
