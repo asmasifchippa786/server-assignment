@@ -4,10 +4,11 @@
   font-family: sans-serif;
   font-size: 18px;
 }
-.body {
+body{
   background-color: black;
-  height: 100vh;
   color: whitesmoke;
+}
+.body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +16,8 @@
 }
 .wrapper {
   padding: 20px;
-  background-color: rgb(25, 25, 25);
   border-radius: 20px;
+  height: 100vh;
 }
 .form {
   display: flex;
@@ -47,5 +48,49 @@
 }
 .btn button:hover{
     background-color: whitesmoke;
-    color: #3c3c3c;
+    color: black;
+}
+.weather-Data{
+  padding: 30px;
+  border-radius: 20px;
+  background-color: rgb(27, 27, 27);
+  font-size: 18px;
+  /* From https://css.glass */
+background: rgba(102, 99, 99, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.8px);
+-webkit-backdrop-filter: blur(7.8px);
+}
+.weather-Data .head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: grey;
+}
+.weather-Data .head .cityname{
+  font-size: 35px;
+}.weather-Data .head .card ,.day , .date {
+  font-size: 15px !important;
+  color: rgb(33, 33, 33);
+}
+.temp{
+  font-size: 100px;
+  text-align: center;
+}
+.other{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 20px;
+  font-size: 20px;
+  color: grey;
+}
+.other .min:hover, .max:hover , .hum:hover, .wind:hover , .cityname:hover{
+  color: white;
+}
+.temp:hover{
+  color: grey;
 }
